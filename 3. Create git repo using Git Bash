@@ -1,0 +1,6 @@
+1. Open the Git Bash terminal.
+2. In project repository I have initialized a new Git repository by - git init
+3. Create new github repository by clicking on the "+" button in the top-right corner and select "New repository" and naming it as "TanyaTest"
+4. Add a remote repository:
+In Git Bash, run the following command to add the remote repository URL-
+      git remote add origin <>
