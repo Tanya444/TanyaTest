@@ -1,0 +1,128 @@
+Q- Create the React app which acts as the Record Form and Collects necessary data of Student 
+for Admission Purpose with mentioned below Requirements-
+( a. Title of the Web APP must be “Admission Form”.
+b. It should have a valid CSS file and the form box must be at centre.
+c. Use CSS box Model to add relevant padding and other styling content.)
+
+Ans- To React app that acts as an admission form to collect necessary data from students:
+1. Create a new React app using Create React App and change to newly created directory.
+npx create-react-app admission-form
+cd admission-form
+
+2. In src/App.js file -
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log('First Name:', firstName);
+    console.log('Last Name:', lastName);
+    console.log('Email:', email);
+    console.log('Phone:', phone);
+
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPhone('');
+  };
+
+  return (
+    <div className="App">
+      <h1>Admission Form</h1>
+      <form onSubmit={handleSubmit}>
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+        />
+
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          required
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+
+3. In src/App.css file -
+.App {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+4. In src/index.js file -
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+5. Start the development server.
+npm start
+
+It displays admission form in web browser with the title "Admission Form". The form will collect the student's first name, last name, email, and phone number. 
+When the form is submitted, the data will be logged to the console. The form box will be centered with appropriate padding and styling applied using CSS.
