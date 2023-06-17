@@ -11,6 +11,7 @@ Ans2) In HTML, tags are used to define the structure and elements of a web page.
 
 1. Heading Tags (h1, h2, h3, etc.):
 Heading tags define different levels of headings on a web page. The "h1" tag represents the highest level, while "h2" represents the second highest, and so on. These tags help organize and structure the content of the page. Example:
+
 <h1>This is a Heading</h1>
 <h2>This is a Subheading</h2>
 2. Paragraph Tags (p):
@@ -88,6 +89,7 @@ Media tags allow the inclusion of various types of media on a web page. The "aud
 <video src="video.mp4" controls></video>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...</iframe>
+
 
 Q3) Explain the working Procedure of Virtual DOM.
 
